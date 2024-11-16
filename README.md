@@ -18,6 +18,6 @@ A click-to-copy open source color scheme generator powered by The Color API. Ver
 
 
 
-This was a really fun project to make and I am satisfied with the result. I learned so much in making it, it was so nice to find another projects in Discord and the one fron Chris McCoy really inspired me.
-I am looking forward to keep learning APIs and more functionalities. Also open to keep learning and getting inspired from the community! 
+This was a really fun project to make and I am satisfied with the result. I learned so much making it, it was so nice to find another projects in Discord and the one from Chris McCoy really inspired me.
+I am looking forward to keep learning APIs and more functionalities. I am also open to keep learning and let myself get inspired by the community! 
 
