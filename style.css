@@ -1,0 +1,225 @@
+body {
+  background-color: #140e39;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: whitesmoke;
+}
+.header{
+  padding: 0.5em;
+  text-align: center;
+  text-wrap:wrap;
+  color: white;
+}
+.header p{
+  
+  margin-bottom: 0;
+}
+
+.header a:hover,
+.header a:focus {
+  color: #D5C207
+}
+.container{
+
+    /* display: flex; */
+    /* justify-content: center; */
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 550px;
+    height: 550px;
+    border: 2px solid white;
+    position: relative; 
+    border: none;
+
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* border: green solid 2px; */
+  width: 550px;
+  height: 55px;
+  
+  background-color: #4959F2;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;}
+
+#color-picker-input,
+#color-mode-selector,
+#btn{
+  background-color: #fff;
+  /* border: 1px solid #808080; */
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 6px; 
+  position:relative;
+  height: 3em;
+  top: 1em;
+  left: 2.5em;
+  z-index:100;
+  
+}
+
+#color-picker-input{
+
+  top: 1.8em;
+  left: 1.3em;
+  width: 6em;
+
+}
+#color-mode-selector{
+  font-size: 1rem;
+  left: 2em;
+  width: 15em;
+  color: #374151;
+  border: 1px solid #808080;
+  
+}
+#color-mode-selector::select{
+  margin-left: 1em;
+}
+#btn{
+  padding: 0 1em;
+  color: #374151;
+  font-size:1em;
+  padding-right: 1em;
+}
+
+/* colorBars key class to fit them in their respective places */
+.flex {
+  display: flex;
+}
+
+.color-column{
+  width: 110px;
+  height: 480px;
+  /* border: solid red 2px; */
+  /* background: black; */
+}
+
+/* colorBars default colors */
+.color-bar1 {
+  background: #D5C207;
+}
+
+.color-bar2 {
+  background: #F9E416;
+}
+
+.color-bar3 {
+  background: #FBEA46;
+}
+
+.color-bar4 {
+  background: #FDF078;
+}
+
+.color-bar5 {
+  background: #FEF6A9;
+}
+
+.footer{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 550px;
+  height: 60px;
+  
+  background-color: #4959F2;
+  bottom: 0px;
+  color: #FEEF5D;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+
+}
+
+
+.color-bar1, .color-bar2, .color-bar3, .color-bar4, .color-bar5, .color-code1, .color-code2, .color-code3, .color-code4, .color-code5
+ {
+  cursor: pointer;
+  /* new */
+  transition: background-color 1.2s ease;   
+  transform-origin: left;
+
+}
+
+.color-picker-input, .color-mode-selector, .colorscheme-btn{
+  cursor: pointer;
+}
+
+
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.popup.show {
+  opacity: 1;
+  animation: slideUp 0.3s ease-out, fadeOut 0.3s ease-in 0.7s forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* Extra added DARK / LIGHT modes + toggle component.  */
+:root {
+  /* Dark theme (default) */
+  --background: #140e39;
+  --text: #4e3535;
+  --header-text: #ffffff;
+  --menu-bg: #4959F2;
+  --link-color: #FEEF5D;  /* Dark mode link color */
+}
+
+[data-theme="light"] {
+  --background: #fef5a93d;
+  --text: #000000;
+  --header-text: #140e39;
+  --menu-bg: #4959F2;
+  --link-color: #4959F2;  /* Light mode link color */
+}
+
+.header a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease;
+}
+
+.header {
+  color: var(--header-text);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 0.5em;
+  right: 2em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+}
+
+.theme-toggle svg {
+  stroke: var(--link-color);
+}

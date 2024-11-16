@@ -1,0 +1,100 @@
+
+<!-- BASED ON GITHUB.DEV/DEVTOPHER -->
+<!-- write all the code per section -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>    
+    <div class="header">
+        <p>An open-source click-to-copy color scheme generator powered by
+            <a href="https://www.thecolorapi.com">The Color API</a>, built by 
+            <a href="https://www.github.com/qcklex">Alex Munoz.</a></p> and inspired by
+            <a href="https://www.github.com/devtopher">Chris McCoy.</a></p> 
+    </div>
+
+    <div class="container">
+
+        <form id="selection-form" class="menu"></form>
+            <!--    TOP LEFT COLOR PICKER-->
+            <input class="color-picker-input" type="color" id="color-picker-input" value="#FEEF5D"/>
+            <!--    MODE SELECTOR -->
+            <select class="color-mode-selector" id="color-mode-selector">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+            </select>
+            <!-- GET COLOR SCHEME submit button -->
+            <button class="colorscheme-btn" id="btn" type="submit">Get color scheme</button>
+        </form>
+ 
+        <!--COLOR BARS SECTION-->
+        <div class="flex">
+                <div class="color-bar1 color-column" id="color-bar1">
+                    <p></p>
+                </div>
+                <div class="color-bar2 color-column" id="color-bar2">
+                    <p></p>
+                </div>
+                <div class="color-bar3 color-column" id="color-bar3">
+                    <p></p>
+                </div>
+                <div class="color-bar4 color-column" id="color-bar4">
+                    <p></p>
+                </div>
+                <div class="color-bar5 color-column" id="color-bar5">
+                    <p></p>
+                </div>
+        </div>
+
+        <!--COLOR BARS CODES SECTION -->
+        <div class="footer dark">
+            <div class="color-code1" id="color-code1">
+                <p>#D5C207</p>
+            </div>
+            <div class="color-code2" id="color-code2">
+                <p>#F9E416</p>
+            </div>
+            <div class="color-code3" id="color-code3">
+                <p>#FBEA46</p>
+               </div>
+            <div class="color-code4" id="color-code4">
+                <p>#FDF078</p>
+            </div>
+            <div class="color-code5" id="color-code5">
+                <p>#FEF6A9</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="popup hidden">
+    Copied!
+</div> 
+
+<!--It would be interesting to add a DARK MODE and LIGHT MODE to add it do it in the Javascript-->
+<button id="theme-toggle" class="theme-toggle">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon"><path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/><path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg>
+</button>
+
+    <div id="overlay" class="overlay hidden"></div>
+    <div id="loader" class="loader hidden"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
