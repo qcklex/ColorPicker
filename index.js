@@ -22,7 +22,6 @@ const colorCode4 = document.getElementById('color-code4')
 const colorCode5 = document.getElementById('color-code5')
 const colorCodeArr = [colorCode1, colorCode2, colorCode3, colorCode4, colorCode5]
 let colorsFromAPI = []
-//Good idea to make an array to know which elements are clickable
 let clickableElements = colorCodeArr.concat(colorBarsArr)
 
 function rgbToHex(color) {
