@@ -1,6 +1,4 @@
 
-<!-- BASED ON GITHUB.DEV/DEVTOPHER -->
-<!-- write all the code per section -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,9 +20,7 @@
     <div class="container">
 
         <form id="selection-form" class="menu"></form>
-            <!--    TOP LEFT COLOR PICKER-->
             <input class="color-picker-input" type="color" id="color-picker-input" value="#FEEF5D"/>
-            <!--    MODE SELECTOR -->
             <select class="color-mode-selector" id="color-mode-selector">
                 <option value="monochrome">Monochrome</option>
                 <option value="monochrome-dark">Monochrome-dark</option>
@@ -34,11 +30,9 @@
                 <option value="analogic-complement">Analogic-complement</option>
                 <option value="triad">Triad</option>
             </select>
-            <!-- GET COLOR SCHEME submit button -->
             <button class="colorscheme-btn" id="btn" type="submit">Get color scheme</button>
         </form>
  
-        <!--COLOR BARS SECTION-->
         <div class="flex">
                 <div class="color-bar1 color-column" id="color-bar1">
                     <p></p>
@@ -57,7 +51,6 @@
                 </div>
         </div>
 
-        <!--COLOR BARS CODES SECTION -->
         <div class="footer dark">
             <div class="color-code1" id="color-code1">
                 <p>#D5C207</p>
@@ -86,13 +79,10 @@
     Copied!
 </div> 
 
-<!--It would be interesting to add a DARK MODE and LIGHT MODE to add it do it in the Javascript-->
 <button id="theme-toggle" class="theme-toggle">
     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon"><path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/><path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg>
 </button>
 
-    <div id="overlay" class="overlay hidden"></div>
-    <div id="loader" class="loader hidden"></div>
 
     <script src="index.js"></script>
 </body>
