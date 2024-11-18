@@ -223,3 +223,34 @@ body {
 .theme-toggle svg {
   stroke: var(--link-color);
 }
+
+
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column; 
+    height: auto;
+    padding: 1em;
+  }
+
+  #color-picker-input,
+  #color-mode-selector,
+  #btn {
+    width: 90%; 
+    margin: 0.5em 0; 
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .color-column {
+    width: 100%; 
+    height: 200px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+  }
+}
